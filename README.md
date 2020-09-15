@@ -5,7 +5,7 @@
 * [Overview](#Overview)
 * [Installation](#Installation)
 * [Usage](#Usage)
-* [Licence](#License)
+* [License](#License)
 * [Test](#Test)
 * [Contributing](#Contributing)
 * [Demo](#Demo)
@@ -21,7 +21,7 @@ This app runs in the `command line` and uses `nodejs`, to start using it make su
 ## Usage
 This is a CLI app, it runs in the terminal. Users create their team by running the app and following the prompts. Make sure you are providing correct information to create your team members. 
 
-## Licence
+## License
 This project is using **MIT License** to find out more about what you can do with this repository check out the documentation of this type of [license](https://api.github.com/licenses/mit).
 
 ## Test
