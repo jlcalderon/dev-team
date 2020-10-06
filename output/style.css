@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.team-heading {
+    background-color: green;
+    color: #FFFF;
+}
+
+.head-card {
+    background-color: green;
+    color: #FFFF;
+}
