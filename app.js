@@ -192,7 +192,11 @@ function userNextStep() {
             // `output` folder. You can use the variable `outputPath` above target this location.
             // Hint: you may need to check if the `output` folder exists and create it if it
             // does not.
-            fs.writeFileSync(outputPath, htmlTemplate);
+            if (fs.existsSync(OUTPUT_DIR)) {
+                fs.writeFileSync(outputPath, htmlTemplate);
+            } else {
+                fs.mkdirSync(OUTPUT_DIR);
+            }
         }
     });
 }
