@@ -5,14 +5,50 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 
+
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+//This array will store all employees created from user's input
+const employeesArray = [];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+
+inquirer.prompt(
+    [{
+            name: "id",
+            message: "Type manager ID",
+            type: "number"
+        },
+        {
+            name: "name",
+            message: "Manager's name:",
+            type: "input"
+        },
+        {
+            name: "email",
+            message: "Type manager's email:",
+            type: "input"
+        },
+        {
+            name: "office_number",
+            message: "Type manager's office number",
+            type: "number"
+        }
+    ]
+).then(function(data) {
+    const myManager = new Manager(data.id, data.name, data.email, data.office_number);
+    //pushing the manager employee to the array
+    employeesArray.push(myManager);
+    //logging some info to the user
+    console.log(`Team Manager was created with the following data -> 
+        ${JSON.stringify(employeesArray[0])}`); //The team manager is alway the index 0 in my employees array 
+});
+
+
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
