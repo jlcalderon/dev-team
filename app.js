@@ -30,6 +30,8 @@ init();
 
 //this is the first function to run it will create a manager of the team and one employee
 function init() {
+    console.log(" --- Creating team's manager --- ");
+    console.log(" ------------------------------- ");
     inquirer.prompt(
         [{
                 name: "id",
@@ -57,10 +59,12 @@ function init() {
         //pushing the manager employee to the array
         employeesArray.push(myManager);
         //logging some info to the user
-        console.log(`Team Manager was created with the following data -> 
-        ${JSON.stringify(employeesArray[0])}`); //The team manager is alway the index 0 in my employees array 
+        console.log(`Team Manager was created succesfully`);
+        console.log(" ------------------------------ ");
+
 
         console.log(" --- Now creating the first team member ---");
+        console.log(" ------------------------------ ");
 
         //Create first employee
         createEmployee();
@@ -94,9 +98,8 @@ function createEngineer() {
     ]).then(function(data) {
         const myEngineer = new Engineer(data.id, data.name, data.email, data.github);
         employeesArray.push(myEngineer);
-        console.log(`New engineer added to the team -> 
-        ${employeesArray[myEngineer]}`);
-
+        console.log(`New engineer added to the team`);
+        console.log(" ------------------------------ ");
         /* ask the user to continue or stop */
         userNextStep();
     });
@@ -129,8 +132,8 @@ function createIntern() {
     ]).then(function(data) {
         const myIntern = new Intern(data.id, data.name, data.email, data.school);
         employeesArray.push(myIntern);
-        console.log(`New Intern added to the team -> 
-        ${employeesArray[myIntern]}`);
+        console.log(`New Intern added to the team`);
+        console.log(" ------------------------------ ");
 
         /* ask the user to continue or stop */
         userNextStep();
@@ -163,6 +166,7 @@ function createEmployee() {
 }
 
 function userNextStep() {
+    console.log(" ------------------------------ ");
     inquirer.prompt(
         [{
             name: "option",
@@ -174,8 +178,11 @@ function userNextStep() {
         if (data.option === "Yes") {
             createEmployee();
         } else {
-            console.log(`This is my team: ${JSON.stringify(employeesArray)}
-            open this link to see the html file ${outputPath}`);
+            console.log(`
+            This is my team: 
+            ${JSON.stringify(employeesArray)}
+            open this link to see the html file:
+            ${outputPath}`);
             // After the user has input all employees desired, call the `render` function (required
             // above) and pass in an array containing all employee objects; the `render` function will
             // generate and return a block of HTML including templated divs for each employee!
