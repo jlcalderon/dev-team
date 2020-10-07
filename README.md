@@ -31,8 +31,8 @@ This project uses `jest` and include a directory name `test`, inside you can fin
 Feel free to contribute, any contribution will be check and verify before to add it to the productive app. you can `fork` and `clone` this repository make your changes `push to your branch` and make a `pull request` to put your changes/additions/corrections on this project.
 
 ## Demo
-![Demo1]()
-![Demo2]()
+![Demo of the HTML output](/assets/demo-html-output.gif)
+![Demo of creating the team file with CLI app](/assets/demo-cli-tool.gif)
 
 ## Questions
 Any further question about this project email direct to <jlcalderonfuentes@gmail.com> feel free to reach out on [Github](https://github.com/jlcalderon)
