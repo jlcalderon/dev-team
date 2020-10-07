@@ -1,15 +1,43 @@
 * {
     margin: 0;
     padding: 0;
-    display: block;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
 }
 
 .team-heading {
-    background-color: green;
-    color: #FFFF;
+    background-color: indigo;
+    color: #FFFFFF;
+}
+
+.employee-card {
+    margin: 2% 2%;
+}
+
+.employee-card:hover {
+    border: 2px solid indigo;
+}
+
+.team-area {
+    background-color: rgb(238, 238, 238);
+    padding: 3% 3%;
 }
 
 .head-card {
-    background-color: green;
-    color: #FFFF;
+    background-color: indigo;
+    color: #FFFFFF;
+}
+
+a {
+    color: darkgray;
+}
+
+a:hover {
+    color: indigo;
+}
+
+li {
+    color: darkgray;
 }
